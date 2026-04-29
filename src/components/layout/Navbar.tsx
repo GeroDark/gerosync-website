@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CalendarDays } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
@@ -8,8 +9,15 @@ export function Navbar() {
       <nav aria-label="Navegación principal" className="section-shell">
         <div className="flex min-h-16 items-center justify-between gap-4">
           <a href="#inicio" className="flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-md border border-cyan/[0.45] bg-cyan/[0.12] text-sm font-black text-cyan">
-              G
+            <span className="grid size-9 place-items-center overflow-hidden rounded-md border border-cyan/[0.35] bg-ink/80">
+              <Image
+                alt="Logo de GEROSYNC"
+                className="size-full object-contain"
+                height={36}
+                priority
+                src="/images/gerosync-logo.png"
+                width={36}
+              />
             </span>
             <span className="text-base font-bold tracking-wide text-white">
               {siteConfig.name}
