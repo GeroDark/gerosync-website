@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -29,8 +30,16 @@ export function Footer() {
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-steel">
             <li>{siteConfig.contact.email}</li>
-            <li>{siteConfig.contact.web}</li>
+            <li>{siteConfig.contact.website}</li>
             <li>{siteConfig.contact.location}</li>
+            <li>
+              <Link
+                className="transition hover:text-white"
+                href={siteConfig.routes.privacy}
+              >
+                Privacidad
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
